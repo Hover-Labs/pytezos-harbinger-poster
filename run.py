@@ -22,8 +22,14 @@ def update(config):
         for k, v in prices.items()
     ])
     print("[+] Updating oracle with prices:\n{}".format(formatted_prices))
-
-    result = bulk_operation.autofill().sign().inject()
+    
+    result = None
+    while result is None:
+        try:
+            result = bulk_operation.autofill().sign().inject(_async=False)
+        except Exception as err:
+            print('Error sending an update\n', err)
+            continue
 
     print("[+] Injected in {}".format(result['hash']))
 
