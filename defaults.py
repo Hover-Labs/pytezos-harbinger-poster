@@ -5,17 +5,21 @@ POSTER_KEY = os.environ.get('POSTER_KEY', None)
 
 ORACLE_DATA_SOURCE = "https://oracle-data.kolibri.finance/data.json"
 
-# Sandboxnet
-# NODE_URL = 'http://host.docker.internal:8732'
-# ORACLE_CONTRACT = 'KT1C481Xumc43dwJ6rSQE3VpPtSWdnnqD7qv'
-# NORMALIZER_CONTRACT = 'KT1Ug4XjN9FWMbbdi8myx358Uh8DUNyTqoiC'
-#
-# Florence Testnet
-# NODE_URL = 'https://rpctest.tzbeta.net'
-# ORACLE_CONTRACT = 'KT1D2F12dbneCAJUXDxzYgoZu8gb5Mjf618m'
-# NORMALIZER_CONTRACT = 'KT1RCNpUEDjZAYhabjzgz1ZfxQijCDVMEaTZ'
+ENVIRONMENTS = {
+    'sandbox': {
+        'node_url': 'https://sandbox.hover.engineering',
+        'oracle_contract': 'KT1KegoDySzN1HbcZfDBtcYXWsNkpffYaYQh',
+        'normalizer_contract': 'KT1LV3DjqarkgQ4PvCZCgbAKYi438WYcehTu'
+    },
+    'florencenet': {
+        'node_url': 'https://rpctest.tzbeta.net',
+        'oracle_contract': 'KT1D2F12dbneCAJUXDxzYgoZu8gb5Mjf618m',
+        'normalizer_contract': 'KT1RCNpUEDjZAYhabjzgz1ZfxQijCDVMEaTZ'
+    },
+    'mainnet': {
+        'node_url': 'https://rpc.tzbeta.net',
+        'oracle_contract': 'KT1Jr5t9UvGiqkvvsuUbPJHaYx24NzdUwNW9',
+        'normalizer_contract': 'KT1AdbYiPYb5hDuEuVrfxmFehtnBCXv4Np7r'
+    }
+}
 
-# Mainnet
-NODE_URL = 'https://rpc.tzbeta.net'
-ORACLE_CONTRACT = 'KT1Jr5t9UvGiqkvvsuUbPJHaYx24NzdUwNW9'
-NORMALIZER_CONTRACT = 'KT1AdbYiPYb5hDuEuVrfxmFehtnBCXv4Np7r'
