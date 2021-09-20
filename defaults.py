@@ -12,8 +12,13 @@ ENVIRONMENTS = {
         'normalizer_contract': 'KT1LV3DjqarkgQ4PvCZCgbAKYi438WYcehTu'
     },
     'florencenet': {
-        'node_url': 'https://rpctest.tzbeta.net',
+        'node_url': 'https://florencenet.smartpy.io',
         'oracle_contract': 'KT1D2F12dbneCAJUXDxzYgoZu8gb5Mjf618m',
+        'normalizer_contract': 'KT1RCNpUEDjZAYhabjzgz1ZfxQijCDVMEaTZ'
+    },
+    'granadanet': {
+        'node_url': 'https://rpctest.tzbeta.net',
+        'oracle_contract': 'KT1AQuWowr3WKwF69oTGcKaJrMajic3CKwR2',
         'normalizer_contract': 'KT1RCNpUEDjZAYhabjzgz1ZfxQijCDVMEaTZ'
     },
     'mainnet': {
