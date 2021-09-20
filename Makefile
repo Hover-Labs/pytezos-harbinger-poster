@@ -7,7 +7,7 @@ bash:
 	docker run --rm -it  -v $$(PWD):/shared --workdir /shared $(TAG) bash
 
 testnet-poster:
-	docker run -e POSTER_KEY=$(POSTER_KEY) -e ENVIRONMENT=florencenet --rm -it $(TAG) python run.py
+	docker run -e POSTER_KEY=$(POSTER_KEY) -e ENVIRONMENT=granadanet --rm -it $(TAG) python run.py
 
 prod-poster:
 	docker run -e POSTER_KEY=$(POSTER_KEY) -e ENVIRONMENT=mainnet --rm -it $(TAG) python run.py
