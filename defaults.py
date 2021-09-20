@@ -19,7 +19,7 @@ ENVIRONMENTS = {
     'granadanet': {
         'node_url': 'https://rpctest.tzbeta.net',
         'oracle_contract': 'KT1AQuWowr3WKwF69oTGcKaJrMajic3CKwR2',
-        'normalizer_contract': 'KT1RCNpUEDjZAYhabjzgz1ZfxQijCDVMEaTZ'
+        'normalizer_contract': 'KT1AQuWowr3WKwF69oTGcKaJrMajic3CKwR2'
     },
     'mainnet': {
         'node_url': 'https://rpc.tzbeta.net',
