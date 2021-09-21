@@ -37,7 +37,7 @@ def update(config):
             time.sleep(5)
             bulk_operation, prices, oracle_timestamp = create_update_operation(config)
             tries += 1
-            if tries > 5:
+            if tries > 10:
                 raise e
 
     print("[+] Injected in {}".format(result['hash']))
