@@ -1,10 +1,12 @@
 import argparse
 import os
+import time
 from datetime import datetime
 from apscheduler.schedulers.blocking import BlockingScheduler
 
 from harbinger.cli import create_update_operation
 import defaults
+import pytezos.rpc.node
 
 def update(config):
     bulk_operation, prices, oracle_timestamp = create_update_operation(config)
@@ -24,7 +26,18 @@ def update(config):
     ])
     print("[+] Updating oracle with prices:\n{}".format(formatted_prices))
 
-    result = bulk_operation.autofill().sign().inject()
+    tries = 1
+    while True:
+        try:
+            result = bulk_operation.autofill().sign().inject()
+            break
+        except pytezos.rpc.node.RpcError as e:
+            print("[Attempt {}] RPC error encountered while posting - {}".format(tries, e))
+            print("Sleeping for a couple seconds and trying again.")
+            time.sleep(5)
+            tries += 1
+            if tries > 5:
+                raise e
 
     print("[+] Injected in {}".format(result['hash']))
 
