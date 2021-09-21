@@ -35,6 +35,7 @@ def update(config):
             print("[Attempt {}] RPC error encountered while posting - {}".format(tries, e))
             print("Sleeping for a couple seconds and trying again.")
             time.sleep(5)
+            bulk_operation, prices, oracle_timestamp = create_update_operation(config)
             tries += 1
             if tries > 5:
                 raise e
