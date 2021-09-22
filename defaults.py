@@ -8,8 +8,8 @@ ORACLE_DATA_SOURCE = "https://oracle-data.kolibri.finance/data.json"
 ENVIRONMENTS = {
     'sandbox': {
         'node_url': 'https://sandbox.hover.engineering',
-        'oracle_contract': 'KT1KegoDySzN1HbcZfDBtcYXWsNkpffYaYQh',
-        'normalizer_contract': 'KT1LV3DjqarkgQ4PvCZCgbAKYi438WYcehTu'
+        'oracle_contract': 'KT1WibJ3Jw5mjgdqVjFBUVR5V4Vq2g7w1Uci',
+        'normalizer_contract': 'KT18xT2hAWdyihbZ5Hw1bYSszGE2NwHpSxUF'
     },
     'florencenet': {
         'node_url': 'https://florencenet.smartpy.io',
