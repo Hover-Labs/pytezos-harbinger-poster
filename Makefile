@@ -13,9 +13,9 @@ prod-poster:
 	docker run -e POSTER_KEY=$(POSTER_KEY) -e ENVIRONMENT=mainnet --rm -it $(TAG) python run.py
 
 sandbox-poster:
-    # Note, uses flextesa "Alice" key, which is public and known which is why it's baked in here.
+    # Note, uses flextesa "Bob" key, which is public and known which is why it's baked in here.
 	docker run --rm -it \
-		-e POSTER_KEY=edsk3QoqBuvdamxouPhin7swCvkQNgq4jP5KZPbwWNnwdZpSpJiEbq \
+		-e POSTER_KEY=edsk3RFfvaFaxbHx8BMtEW1rKQcPtDML3LXjNqMNLCzC3wLC1bWbAt \
 		-e ENVIRONMENT=sandbox \
 		$(TAG) \
 		python run.py --update-interval 5 # Update every 5 mins
