@@ -22,7 +22,7 @@ ENVIRONMENTS = {
         'normalizer_contract': 'KT1AQuWowr3WKwF69oTGcKaJrMajic3CKwR2'
     },
     'mainnet': {
-        'node_url': 'https://rpc.tzbeta.net',
+        'node_url': 'https://mainnet.api.tez.ie',
         'oracle_contract': 'KT1Jr5t9UvGiqkvvsuUbPJHaYx24NzdUwNW9',
         'normalizer_contract': 'KT1AdbYiPYb5hDuEuVrfxmFehtnBCXv4Np7r'
     }
