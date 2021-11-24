@@ -8,4 +8,4 @@ Installation is pretty basic, just run `pip install -r requirements.txt`, and th
 
 Things default to production and you can specify your poster private key with `--poster-key` or via the `POSTER_KEY` environment variable.
 
-If you want to run things via docker, you can just run `make build-docker` and `make run POSTER_KEY=YOUR_POSTER_KEY` or do whatever docker things you'd like!
+If you want to run things via docker, you can just run `make build-docker` and `make prod-poster POSTER_KEY=YOUR_POSTER_KEY` or do whatever docker things you'd like!
