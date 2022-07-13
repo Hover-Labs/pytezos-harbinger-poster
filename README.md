@@ -1,4 +1,4 @@
-# Pytezos Harbiner Poster
+# PyTezos Harbinger Poster
 
 This is just a simple poster that will take the data source from the harbinger.live site and use it to post to the harbiner oracle/normalizer using PyTezos.
 
